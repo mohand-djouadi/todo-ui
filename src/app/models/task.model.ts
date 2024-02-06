@@ -3,5 +3,6 @@ export class task {
     title!: string;
     taskDate!: Date;
     location!: string;
+    done!: boolean;
     description!: string;
 }

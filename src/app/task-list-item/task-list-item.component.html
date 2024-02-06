@@ -1,1 +1,5 @@
-<p>task-list-item works!</p>
+<div class="task-item">
+    <h3>{{ taskItem.title | titlecase }}</h3>
+    <p>{{ taskItem.taskDate | date: 'dd MMMM yyyy HH:mm' }}</p>
+    <p>{{ taskItem.location }}</p>
+</div>

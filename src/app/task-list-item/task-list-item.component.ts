@@ -1,4 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { taskServive } from '../services/task.service';
+import { task } from '../models/task.model';
 
 @Component({
   selector: 'app-task-list-item',
@@ -7,7 +9,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class TaskListItemComponent implements OnInit {
 
-  @Input() taskItem !: TaskListItemComponent
+  @Input() taskItem !: task
 
   ngOnInit(): void {
 
