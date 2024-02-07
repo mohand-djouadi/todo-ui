@@ -1,0 +1,9 @@
+.task-item {
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+}
+
+.elems {
+    flex: 1 0 15px;
+}

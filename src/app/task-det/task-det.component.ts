@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { task } from '../models/task.model';
 
 @Component({
   selector: 'app-task-det',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrl: './task-det.component.css'
 })
 export class TaskDetComponent {
+
+  @Input() task!: task;
 
 }
