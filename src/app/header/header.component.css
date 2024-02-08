@@ -32,3 +32,12 @@ header {
     background-color: rgba(0, 0, 0, .3);
     border-radius: 50px;
 }
+
+.nav-links .active {
+    text-decoration-line: none;
+    padding: 16px;
+    font-size: 20px;
+    color: black;
+    background-color: rgba(0, 0, 0, .4);
+    border-radius: 50px;
+}

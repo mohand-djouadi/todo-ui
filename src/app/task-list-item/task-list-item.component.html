@@ -1,4 +1,4 @@
-<div class="task-item">
+<div class="task-item" (click)="onView()">
     <h3 class="elems">{{ taskItem.title | titlecase }}</h3>
     <p class="elems">{{ taskItem.taskDate | date: 'dd MMMM yyyy HH:mm' }}</p>
     <p class="elems">{{ taskItem.location }}</p>
