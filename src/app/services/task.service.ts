@@ -27,4 +27,38 @@ export class taskServive {
         }
     }
 
+    getDoneTasks() : task[] {
+        return this.tasks.filter((task) => task.done)
+    }
+
+    getNoneDoneTasks() : task[] {
+        return this.tasks.filter((task) => !task.done)
+    }
+
+    makeTaskDone(taskId: number): void {
+        const task = this.tasks.find((task) => task.id ==taskId)
+        if (task !==undefined) {
+            if (task.done) {
+                throw new Error('this task is already done')
+            } else {
+                task.done = true
+            }
+        } else {
+            throw new Error('can\'t find this task')
+        }
+    }
+
+    makeTaskNotDone(taskId: number): void {
+        const task = this.tasks.find((task) => task.id ==taskId)
+        if (task !==undefined) {
+            if (task.done) {
+                task.done = false
+            } else {
+                throw new Error('this task is already not done')
+            }
+        } else {
+            throw new Error('can\'t find this task')
+        }
+    }
+
 }

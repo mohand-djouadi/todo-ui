@@ -5,7 +5,7 @@
     <p>{{ taskDet.description }}</p>
     <p>{{ taskDet.done }}</p>
     <div class="options">
-        <button>Done</button>
-        <button>Not Done</button>
+        <button (click)="onDone()">Done</button>
+        <button (click)="onNotDone()">Not Done</button>
     </div>
 </div>

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { task } from '../models/task.model';
+import { task } from '../../models/task.model';
 import { ActivatedRoute, Router } from '@angular/router';
-import { taskServive } from '../services/task.service';
+import { taskServive } from '../../services/task.service';
 
 @Component({
   selector: 'app-task-det',
@@ -17,6 +17,15 @@ export class TaskDetComponent implements OnInit {
 
   ngOnInit() {
     this.taskDet = this.taskService.getTaskById(+this.route.snapshot.params['id'])
+  }
+
+  onDone() {
+    this.taskService.makeTaskDone(+this.route.snapshot.params['id'])
+    
+  }
+
+  onNotDone() {
+    this.taskService.makeTaskNotDone(+this.route.snapshot.params['id'])
   }
 
 }
