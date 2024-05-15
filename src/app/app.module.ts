@@ -11,6 +11,10 @@ import { TaskFiltersComponent } from './components/task-filters/task-filters.com
 import { TasksComponent } from './pages/tasks/tasks.component';
 import { SettingsComponent } from './pages/settings/settings.component';
 import { NewTaskComponent } from './pages/new-task/new-task.component';
+import { SignUpComponent } from './pages/sign-up/sign-up.component';
+import { LogInComponent } from './pages/log-in/log-in.component';
+import { HomeComponent } from './pages/home/home.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +26,11 @@ import { NewTaskComponent } from './pages/new-task/new-task.component';
     TaskFiltersComponent,
     TasksComponent,
     SettingsComponent,
-    NewTaskComponent
+    NewTaskComponent,
+    SignUpComponent,
+    LogInComponent,
+    HomeComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

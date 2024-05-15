@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { TaskListComponent } from './components/task-list/task-list.component';
-import { TaskDetComponent } from './components/task-det/task-det.component';
+import { HomeComponent } from './pages/home/home.component';
+import { LogInComponent } from './pages/log-in/log-in.component';
+import { SignUpComponent } from './pages/sign-up/sign-up.component';
 
 const routes: Routes = [
-  { path: 'tasks', component: TaskListComponent },
-  { path: 'tasks/:id', component: TaskDetComponent }
+  { path: '', component: HomeComponent },
+  { path: 'signup', component: SignUpComponent },
+  { path: 'login', component: LogInComponent }
 ];
 
 @NgModule({
