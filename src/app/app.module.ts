@@ -15,6 +15,9 @@ import { SignUpComponent } from './pages/sign-up/sign-up.component';
 import { LogInComponent } from './pages/log-in/log-in.component';
 import { HomeComponent } from './pages/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
+import { SignupBoxComponent } from './components/signup-box/signup-box.component';
+import { LoginBoxComponent } from './components/login-box/login-box.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -30,11 +33,14 @@ import { HeaderComponent } from './components/header/header.component';
     SignUpComponent,
     LogInComponent,
     HomeComponent,
-    HeaderComponent
+    HeaderComponent,
+    SignupBoxComponent,
+    LoginBoxComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [
     provideClientHydration()

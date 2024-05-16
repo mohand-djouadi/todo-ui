@@ -1,0 +1,29 @@
+<div class="signup-box">
+    <form [formGroup]="signUpForm" (onSubmit)="onSubmit()">
+        <div class="input">
+            <label for="firstname">First name</label>
+            <input type="text" id="firstname" formControlName="first_name">
+        </div>
+        <div class="input">
+            <label for="lastname">Last name</label>
+            <input type="text" id="lastname" formControlName="last_name">
+        </div>
+        <div class="input">
+            <label for="email">Email</label>
+            <input type="text" id="email" formControlName="email">
+        </div>
+        <div class="input">
+            <label for="username">Username</label>
+            <input type="text" id="username" formControlName="username">
+        </div>
+        <div class="input">
+            <label for="password">Password</label>
+            <input type="password" id="password" formControlName="password">
+        </div>
+        <div class="input">
+            <label for="confirm">Confirmation</label>
+            <input type="password" id="confirm" formControlName="confirm">
+        </div>
+        <button type="submit" [disabled]="signUpForm.invalid">Sign Up</button>
+    </form>
+</div>
