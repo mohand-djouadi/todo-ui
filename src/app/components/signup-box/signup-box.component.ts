@@ -28,17 +28,6 @@ export class SignupBoxComponent implements OnInit {
     this.signUpForm.valueChanges.subscribe((value) => {
       console.log(value);
     });
-    this.signUpForm.statusChanges.subscribe((status) => {
-      console.log('Form is valid:', status === 'VALID');
-      if (status === 'INVALID') {
-        console.log('Form is invalid. Errors:', this.signUpForm.errors); // Affichez les erreurs de validation dans la console
-      } // Imprimez l'état de validation du formulaire dans la console
-      const passwordErrors = this.signUpForm.get('password')?.errors;
-    console.log('Password errors:', passwordErrors);
-    
-    const confirmErrors = this.signUpForm.get('confirm')?.errors;
-    console.log('Confirm errors:', confirmErrors);
-    });
   }
   
   onSubmit() {
