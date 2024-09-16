@@ -18,6 +18,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { SignupBoxComponent } from './components/signup-box/signup-box.component';
 import { LoginBoxComponent } from './components/login-box/login-box.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ProfilePicFormComponent } from './components/profile-pic-form/profile-pic-form.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     HomeComponent,
     HeaderComponent,
     SignupBoxComponent,
-    LoginBoxComponent
+    LoginBoxComponent,
+    ProfilePicFormComponent
   ],
   imports: [
     BrowserModule,

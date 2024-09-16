@@ -1,0 +1,13 @@
+<div>
+  <form [formGroup]="profilePicForm">
+
+    <div class="profile-pic">
+      <label class="-label" for="pic">
+        <span class="glyphicon glyphicon-camera"></span>
+        <span>Change Image</span>
+      </label>
+      <input type="file" (change)="onFileChanged($event)" id="pic" formControlName="picture" >
+      <img *ngIf="imageUrl" [src]="imageUrl" id="output" width="200" />
+    </div>
+  </form>
+</div>
