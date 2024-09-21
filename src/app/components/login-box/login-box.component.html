@@ -3,11 +3,11 @@
     <form [formGroup]="logInForm" (onSubmit)="onSubmit">
         <div class="input-group">
             <input type="text" formControlName="username" required class="input">
-            <label for="username" class="label">UserName</label>
+            <label class="label">UserName</label>
         </div>
         <div class="input-group">
             <input type="password" formControlName="password" required class="input">
-            <label for="password" class="label">Password</label>
+            <label class="label">Password</label>
         </div>
         <button type="submit" [disabled]="logInForm.invalid">Log In</button>
     </form>

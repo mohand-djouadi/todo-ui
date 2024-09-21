@@ -19,6 +19,7 @@ import { SignupBoxComponent } from './components/signup-box/signup-box.component
 import { LoginBoxComponent } from './components/login-box/login-box.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ProfilePicFormComponent } from './components/profile-pic-form/profile-pic-form.component';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { ProfilePicFormComponent } from './components/profile-pic-form/profile-p
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [
     provideClientHydration()

@@ -1,29 +1,30 @@
 <div class="signup-box">
     <h2>Sign Up</h2>
-    <form [formGroup]="signUpForm" (onSubmit)="onSubmit()">
+    <div>{{ error }}</div>
+    <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
         <div class="input-group">
             <input type="text" class="input" required formControlName="first_name">
-            <label for="firstname" class="label">First name</label>
+            <label class="label">First name</label>
         </div>
         <div class="input-group">
             <input type="text" class="input" required formControlName="last_name">
-            <label for="lastname" class="label">Last name</label>
+            <label class="label">Last name</label>
         </div>
         <div class="input-group">
             <input type="text" class="input" required formControlName="email">
-            <label for="email" class="label">Email</label>
+            <label class="label">Email</label>
         </div>
         <div class="input-group">
             <input type="text"  class="input" required formControlName="username">
-            <label for="username" class="label">Username</label>
+            <label class="label">Username</label>
         </div>
         <div class="input-group">
             <input type="password"  class="input" required formControlName="password">
-            <label for="password" class="label">Password</label>
+            <label class="label">Password</label>
         </div>
         <div class="input-group">
             <input type="password" class="input" required formControlName="confirm">
-            <label for="confirm" class="label">Confirmation</label>
+            <label class="label">Confirmation</label>
         </div>
         <button type="submit" [disabled]="signUpForm.invalid">Sign Up</button>
     </form>

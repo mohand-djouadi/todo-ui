@@ -2,7 +2,7 @@
      background-color: #65B07A;
      width: 100%;
      padding: 6rem;
-     height: 78vh;
+     height: 80vh;
      border-radius: 10%;
      display: flex;
      flex-direction: column;
@@ -45,7 +45,7 @@
    }
 
    .input:focus ~ label, input:valid ~ label {
-    transform: translateY(-50%) scale(0.8);
+    transform: translateY(-20%) scale(0.8);
     background-color: none;
     padding: 0 .2em;
     color: #CBC461;
@@ -57,4 +57,10 @@
      border-radius: 25px;
      background-color: #CBC461;
      border: none;
+   }
+
+   .error {
+     color: red;
+     margin-top: 1rem;
+     font-size: 1.3rem;
    }

@@ -1,3 +1,8 @@
-<app-header></app-header>
-<router-outlet>
-</router-outlet>
+<div *ngIf="!verifieUserAuth()">
+  <app-header></app-header>
+  <router-outlet>
+  </router-outlet>
+</div>
+<div *ngIf="verifieUserAuth()">
+  user authentifier
+</div>
