@@ -61,7 +61,7 @@ export class SignupBoxComponent implements OnInit {
     this.http.post<any>('http://127.0.0.1:8000/auth/signup', user).subscribe({
       next: userResponse => {
         sessionStorage.setItem('user', JSON.stringify(userResponse));
-        this.router.navigateByUrl('/');
+        this.router.navigateByUrl('task');
       },
       error: err => {
         this.error = err.message;

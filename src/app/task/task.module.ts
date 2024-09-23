@@ -10,6 +10,8 @@ import {TaskListItemComponent} from "./components/task-list-item/task-list-item.
 import {NewTaskComponent} from "./pages/new-task/new-task.component";
 import {SettingsComponent} from "./pages/settings/settings.component";
 import {TasksComponent} from "./pages/tasks/tasks.component";
+import {TaskRoutingModule} from "./task-routing.module";
+import {RouterModule} from "@angular/router";
 
 
 
@@ -28,7 +30,10 @@ import {TasksComponent} from "./pages/tasks/tasks.component";
     CommonModule,
     HttpClientModule,
     ReactiveFormsModule,
+    RouterModule
   ],
-
+  exports: [
+    TaskRoutingModule,
+  ]
 })
 export class TaskModule { }

@@ -20,18 +20,11 @@ import { LoginBoxComponent } from './components/login-box/login-box.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ProfilePicFormComponent } from './components/profile-pic-form/profile-pic-form.component';
 import {HttpClientModule} from "@angular/common/http";
+import {TaskModule} from "./task/task.module";
 
 @NgModule({
   declarations: [
     AppComponent,
-    TaskListComponent,
-    TaskListItemComponent,
-    TaskDetComponent,
-    SideBarComponent,
-    TaskFiltersComponent,
-    TasksComponent,
-    SettingsComponent,
-    NewTaskComponent,
     SignUpComponent,
     LogInComponent,
     HomeComponent,
@@ -45,6 +38,7 @@ import {HttpClientModule} from "@angular/common/http";
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
+    TaskModule
   ],
   providers: [
     provideClientHydration()
