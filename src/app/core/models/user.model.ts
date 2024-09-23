@@ -3,5 +3,6 @@ export class User {
     first_name!: string;
     last_name!: string
     email!: string;
-    date_joined!: Date;
+    password!: string;
+    token!: string | null;
 }

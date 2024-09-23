@@ -1,6 +1,8 @@
 import { Component,OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { passwordMatchValidator } from './password-match.validator';
+import {User} from "../../core/models/user.model";
+import {Router} from "@angular/router";
 import {HttpClient} from "@angular/common/http";
 
 @Component({
@@ -13,7 +15,11 @@ export class SignupBoxComponent implements OnInit {
   RegEx: RegExp = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/
   error!: string;
 
-  constructor(private suForm: FormBuilder, private http: HttpClient) {}
+  constructor(
+    private suForm: FormBuilder,
+    private router: Router,
+    private http: HttpClient
+  ) {}
 
   ngOnInit(): void {
     this.signUpForm = this.suForm.group({
@@ -44,6 +50,22 @@ export class SignupBoxComponent implements OnInit {
   }
 
   onSubmit() {
-
+    const user: User = {
+      first_name: this.signUpForm.get('first_name')?.value,
+      last_name: this.signUpForm.get('last_name')?.value,
+      email: this.signUpForm.get('email')?.value,
+      username: this.signUpForm.get('username')?.value,
+      password: this.signUpForm.get('password')?.value,
+      token: null
+    }
+    this.http.post<any>('http://127.0.0.1:8000/auth/signup', user).subscribe({
+      next: userResponse => {
+        sessionStorage.setItem('user', JSON.stringify(userResponse));
+        this.router.navigateByUrl('/');
+      },
+      error: err => {
+        this.error = err.message;
+      }
+    })
   }
 }
