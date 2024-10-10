@@ -4,7 +4,6 @@ import {HttpClientModule} from "@angular/common/http";
 import {ReactiveFormsModule} from "@angular/forms";
 import {SideBarComponent} from "./components/side-bar/side-bar.component";
 import {TaskListComponent} from "./components/task-list/task-list.component";
-import {TaskDetComponent} from "./components/task-det/task-det.component";
 import {TaskFiltersComponent} from "./components/task-filters/task-filters.component";
 import {TaskListItemComponent} from "./components/task-list-item/task-list-item.component";
 import {NewTaskComponent} from "./pages/new-task/new-task.component";
@@ -12,6 +11,8 @@ import {SettingsComponent} from "./pages/settings/settings.component";
 import {TasksComponent} from "./pages/tasks/tasks.component";
 import {TaskRoutingModule} from "./task-routing.module";
 import {RouterModule} from "@angular/router";
+import {TaskDetailComponent} from './pages/task-detail/task-detail.component';
+import {TaskMainComponent} from "./task-main.component";
 
 
 
@@ -19,12 +20,13 @@ import {RouterModule} from "@angular/router";
   declarations: [
     SideBarComponent,
     TaskListComponent,
-    TaskDetComponent,
+    TaskMainComponent,
     TaskFiltersComponent,
     TaskListItemComponent,
     NewTaskComponent,
     SettingsComponent,
-    TasksComponent
+    TasksComponent,
+    TaskDetailComponent
   ],
   imports: [
     CommonModule,
@@ -34,6 +36,7 @@ import {RouterModule} from "@angular/router";
   ],
   exports: [
     TaskRoutingModule,
+    SideBarComponent,
   ]
 })
 export class TaskModule { }

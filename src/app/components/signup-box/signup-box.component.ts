@@ -64,7 +64,7 @@ export class SignupBoxComponent implements OnInit {
         this.router.navigateByUrl('task');
       },
       error: err => {
-        this.error = err.message;
+        this.error = err.message.message;
       }
     })
   }
